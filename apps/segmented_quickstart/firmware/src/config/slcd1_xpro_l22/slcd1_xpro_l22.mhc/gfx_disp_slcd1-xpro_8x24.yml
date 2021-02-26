@@ -1,0 +1,6 @@
+format_version: v1.0
+type: UniqueComponent
+attributes: {id: gfx_disp_slcd1-xpro_8x24}
+children:
+- type: ElementPosition
+  attributes: {x: '830', y: '80', id: gfx_disp_slcd1-xpro_8x24}

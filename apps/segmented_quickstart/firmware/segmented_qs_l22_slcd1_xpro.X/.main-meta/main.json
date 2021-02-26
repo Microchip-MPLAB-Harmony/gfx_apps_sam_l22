@@ -1,0 +1,75 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+                "name": "com.microchip.mcu32.mplabx.project.gfx_apps_saml22_segmented_quickstart_slcd1_xpro_l22",
+		"version": "3.9.0",
+                "displayName": "Segmented Quickstart Example for SAM L22 Family",
+                "projectName": "segmented_quickstart_slcd1",
+                "shortDescription": "This demonstration provides segmented display character mapping solution using the slcd1 segmented display driver.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.45.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=2.50.0"
+			}
+		],
+		"dfp": {
+                        "name": "SAML22_DFP",
+                        "semverRange": "^3.4.61"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.6.2"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+                                "name": "ATSAML22N18A",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+                                "Development Kit", "SAM L22 Xplained Pro kit"
+			],
+			[
+                                "Harmony", "Middleware", "Graphics", "Segmented", "SEGMENTED_QUICKSTART"
+			],
+			[
+                                "Middleware", "Graphics", "Segmented", "SEGMENTED_QUICKSTART"
+			]
+		],
+		"peripherals": [
+                        "DMAC",
+                        "SERCOM",
+                        "USART"		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"Graphics",
+                        "ATSAML22N18A",
+                        "SAM L22 Family",
+                        "SLCD1"		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

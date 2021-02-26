@@ -1,0 +1,14 @@
+configName: slcd1_xpro_l22
+folderName: legato_qs_l22_slcd1_xpro
+format_version: v1.0
+frameworkPath: ..\..\..
+processor: ATSAML22N18A
+projectName: legato_quickstart_slcd1
+settings:
+  PackageFilter: aerospace;audio;bsp;bt;core;csp;csp_apps_sam_9x60;gfx;aerospace;gfx_apps_pic32mz_da;gfx_apps_pic32mz_da;gfx_apps_pic32mz_da;gfx_apps_pic32mz_da;gfx_apps_pic32mz_da;usb;
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\SAML22_DFP\3.4.59\atdf\ATSAML22N18A.atdf
