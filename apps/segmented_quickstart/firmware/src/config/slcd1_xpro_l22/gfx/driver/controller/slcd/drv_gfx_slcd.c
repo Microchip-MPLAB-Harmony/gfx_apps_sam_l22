@@ -77,9 +77,6 @@
 #define CONF_SLCD_PIN_L_MASK       0xCFFFFFC0
 #define CONF_SLCD_PIN_H_MASK       0x00000FF0
 
-#define SLCD_MAX_COM                8        // Max number of COM lines (4 or 8)
-#define SLCD_MAX_SEG                44       // Max number of SEG lines (24 or 44)
-
 /**** Hardware Abstraction Interfaces ****/
 typedef enum
 {
@@ -168,11 +165,11 @@ static struct slcd_config config;
  */
 void slcd_get_config_defaults()
 {
-        config.run_in_standby = false;
-        config.low_resistance_duration = 0;
-        config.enable_low_resistance = false;
-        config.bias_buffer_duration = 0;
-        config.enable_bias_buffer = true;
+    config.run_in_standby = false;
+    config.low_resistance_duration = 0;
+    config.enable_low_resistance = false;
+    config.bias_buffer_duration = 0;
+    config.enable_bias_buffer = true;
 }
 
 void DRV_SLCD_Update()
@@ -194,7 +191,6 @@ void DRV_SLCD_Update()
 gfxResult DRV_SLCD_Initialize()
 {
     slcd_get_config_defaults();
-
     //if (!config) {
     //    return STATUS_ERR_INVALID_ARG;
     //}

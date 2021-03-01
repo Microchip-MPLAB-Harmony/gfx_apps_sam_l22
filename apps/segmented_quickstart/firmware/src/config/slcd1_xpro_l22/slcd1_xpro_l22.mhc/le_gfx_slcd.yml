@@ -11,5 +11,20 @@ children:
       children:
       - type: User
         attributes: {value: 'true'}
+- type: Attachments
+  children:
+  - type: DirectDependency
+    attributes: {id: Segmented Display}
+    children:
+    - type: Attributes
+      children:
+      - type: String
+        attributes: {id: targetComponentID}
+        children:
+        - {type: Value, value: gfx_disp_slcd1-xpro_8x24}
+      - type: String
+        attributes: {id: targetAttachmentID}
+        children:
+        - {type: Value, value: slcd_display}
 - type: ElementPosition
-  attributes: {x: '650', y: '60', id: le_gfx_slcd}
+  attributes: {x: '613', y: '153', id: le_gfx_slcd}
