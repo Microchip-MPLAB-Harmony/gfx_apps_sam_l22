@@ -321,13 +321,13 @@ files:
   security: NON_SECURE
   type: HEADER
   userChecksum: 5CF6E4538D99974C364810A03E3D8616
-- generatedChecksum: 73C02A99CB8FE21E51EB0A77D1CA4B8E
+- generatedChecksum: 8662C6E86A80A960D79DB3FA6FC9BFDB
   logicalPath: config\slcd1_xpro_l22\gfx\driver\slcd
   name: drv_gfx_slcd.h
   physicalPath: gfx\driver\controller\slcd
   security: NON_SECURE
   type: HEADER
-  userChecksum: 73C02A99CB8FE21E51EB0A77D1CA4B8E
+  userChecksum: 8662C6E86A80A960D79DB3FA6FC9BFDB
 - generatedChecksum: AD126351834367D9D0EA084B73BA7D99
   logicalPath: packs\ATSAML22N18A_DFP\component
   name: dsu.h
