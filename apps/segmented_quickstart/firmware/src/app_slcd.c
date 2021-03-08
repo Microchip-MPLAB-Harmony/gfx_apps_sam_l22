@@ -32,6 +32,7 @@
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
 #include "definitions.h"                // SYS function prototypes
+#include "gfx/driver/controller/slcd/drv_gfx_slcd.h"
 
 const uint32_t quickstart_map[] = {
 	0xE03C, 0x601C, 0x8484, 0xC014, 0x4930, 0xC30C, 0x8480, 0xE318, 0xE330, 0x8480 /* quickstart */
