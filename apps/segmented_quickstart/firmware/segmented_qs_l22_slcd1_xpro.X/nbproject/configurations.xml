@@ -89,6 +89,7 @@
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAML22N18A_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/ac.h</itemPath>
@@ -128,6 +129,7 @@
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/trng.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAML22N18A_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAML22N18A_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAML22N18A_DFP/pio/saml22n18a.h</itemPath>
@@ -221,6 +223,7 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app_slcd.c</itemPath>
+      <itemPath>../src/config/slcd1_xpro_l22/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -246,6 +249,8 @@
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/slcd1_xpro_l22/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/slcd1_xpro_l22/harmony-manifest-failure.yml</itemPath>
+      <itemPath>../src/config/slcd1_xpro_l22/pin_configurations.csv</itemPath>
+      <itemPath>segmented_quickstart_slcd1.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -261,12 +266,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <languageToolchainVersion>4.10</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
-        <pack name="SAML22_DFP" vendor="Microchip" version="3.5.68"/>
+        <pack name="SAML22_DFP" vendor="Microchip" version="3.6.74"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -322,13 +327,15 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe"
+                  value="-Wformat=2 -Wundef -Wimplicit-function-declaration -Wpointer-arith -Wbad-function-cast -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wno-deprecated-declarations -Wredundant-decls -Wnested-externs -Winline -Wlong-long -Wunreachable-code -Wmissing-noreturn"/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/slcd1_xpro_l22;../src/packs/ATSAML22N18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+                  value="../src;../src/config/slcd1_xpro_l22;../src/packs/ATSAML22N18A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -340,6 +347,7 @@
         <property key="preprocessor-macros" value=""/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
+        <property key="tentative-definitions" value="-fno-common"/>
         <property key="toplevel-reordering" value=""/>
         <property key="unaligned-access" value=""/>
         <property key="use-cci" value="false"/>
@@ -372,11 +380,13 @@
       </C32-AS>
       <C32-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -403,7 +413,7 @@
         <property key="no-startup-files" value="false"/>
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros" value=";"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -416,6 +426,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -425,7 +436,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/slcd1_xpro_l22;../src/packs/ATSAML22N18A_DFP;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include"/>
+                  value="../src;../src/config/slcd1_xpro_l22;../src/packs/ATSAML22N18A_DFP;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/CMSIS/;"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -453,6 +464,7 @@
         <property key="omit-pack-options" value="1"/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
       </C32Global>
       <EdbgTool>

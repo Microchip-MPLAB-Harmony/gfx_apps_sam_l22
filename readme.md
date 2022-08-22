@@ -38,7 +38,7 @@ The following applications are provided to demonstrate a subset of the capabilit
 
 | Category | Item | Description | Release Type |
 | --- | --- | ---- |---- |
-|     | [segmented_quickstart](./apps/segmented_quickstart/readme.md) | Quickstart example for Segmented LCD | ![app-beta](https://img.shields.io/badge/application-beta-orange?style=plastic) |
+|     | [segmented_quickstart](./apps/segmented_quickstart/readme.md) | Quickstart example for Segmented LCD | ![app-beta](https://img.shields.io/badge/application-production-green?style=plastic) |
 
 
 ____
